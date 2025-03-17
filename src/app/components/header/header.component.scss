@@ -1,0 +1,20 @@
+#header {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+#header.scrolled {
+  background-color: rgba(60, 120, 60, 0.8);  
+  backdrop-filter: blur(8px); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);  
+}
+
+#header.scrolled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(85, 107, 47, 0.8), rgba(255, 223, 186, 0.7)); 
+  z-index: -1;
+}
